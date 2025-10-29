@@ -1,6 +1,11 @@
 'use client'
 
-import { ConfigProvider } from 'antd'
+import { theme as antdTheme, ConfigProvider } from 'antd'
+import { useTheme } from 'next-themes'
+import { useIsClient } from '@/hooks/use-is-client'
+
+// import antdEnUS from 'antd/es/locale/en_US'
+// import antdZhCN from 'antd/es/locale/zh_CN'
 
 // Suppress antd React 19 compatibility warning since we use @ant-design/v5-patch-for-react-19
 if (typeof window !== 'undefined') {
@@ -28,5 +33,22 @@ if (typeof window !== 'undefined') {
 }
 
 export function AntdWrapper({ children }: { children: React.ReactNode }) {
-  return <ConfigProvider>{children}</ConfigProvider>
+  const { resolvedTheme } = useTheme()
+  const mounted = useIsClient()
+
+  if (!mounted) return null
+
+  return (
+    <ConfigProvider
+      // locale={locale === 'zh' ? antdZhCN : antdEnUS}
+      theme={{
+        algorithm:
+          resolvedTheme === 'dark'
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
+      }}
+    >
+      {children}
+    </ConfigProvider>
+  )
 }

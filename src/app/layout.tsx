@@ -4,7 +4,8 @@ import '@ant-design/v5-patch-for-react-19'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
-import { AntdWrapper } from '@/app/components/antd-wrapper'
+import { AntdWrapper } from '@/components/antd-wrapper'
+import { ThemeProvider } from '@/components/theme-provider'
 import { TRPCReactProvider } from '@/trpc/react'
 
 export const metadata: Metadata = {
@@ -25,13 +26,21 @@ export default function RootLayout({
     <html
       lang='en'
       className={`${geist.variable}`}
+      suppressHydrationWarning
     >
       <body>
-        <TRPCReactProvider>
-          <AntdRegistry>
-            <AntdWrapper>{children}</AntdWrapper>
-          </AntdRegistry>
-        </TRPCReactProvider>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TRPCReactProvider>
+            <AntdRegistry>
+              <AntdWrapper>{children}</AntdWrapper>
+            </AntdRegistry>
+          </TRPCReactProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

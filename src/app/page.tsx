@@ -1,9 +1,11 @@
-import { ButtonDemo } from './components/button'
+import { ModeToggle } from '@/components/button'
+import { CalendarComponent } from '@/components/calendar'
 
 export default async function Home() {
   return (
     <div className='flex h-screen flex-col items-center justify-center'>
-      <ButtonDemo />
+      <ModeToggle />
+      <CalendarComponent />
     </div>
   )
 }
