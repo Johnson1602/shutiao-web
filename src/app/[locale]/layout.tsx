@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { AntdWrapper } from '@/components/antd-wrapper'
+import { Analytics } from '@/components/common/analytics'
 import { ThemeProvider } from '@/components/theme/provider'
 import { geist } from '@/fonts'
 import { routing } from '@/i18n/routing'
@@ -52,7 +53,10 @@ export default async function RootLayout({ children, params }: Props) {
           <NextIntlClientProvider>
             <TRPCReactProvider>
               <AntdRegistry>
-                <AntdWrapper>{children}</AntdWrapper>
+                <AntdWrapper>
+                  {children}
+                  <Analytics />
+                </AntdWrapper>
               </AntdRegistry>
             </TRPCReactProvider>
           </NextIntlClientProvider>
