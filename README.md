@@ -16,15 +16,17 @@
 
 ## 🔨 Tech Stack
 
-- ⚡ Framework - [TanStack Start](https://tanstack.com/start)
+- ⚡ Framework - [Next.js](https://nextjs.org)
 - 🧩 Language - [TypeScript](https://www.typescriptlang.org)
-- 🛣️ Router - [TanStack Router](https://tanstack.com/router)
-- ⚙️ Build Tool - [Vite](https://vitejs.dev)
 - 🌬️ Styling - [Tailwind CSS](https://tailwindcss.com)
-- 🎛️ UI Library - [Radix UI](https://www.radix-ui.com)
-- 🐻 State Management - [TanStack Store](https://tanstack.com/store)
-- 🌐 Multi-language - [i18next](https://www.i18next.com)
+- 🎛️ UI Library - [shadcn/ui](https://ui.shadcn.com) && [Ant Design](https://ant.design/)
+- 🐻 State Management - [Zustand](https://zustand-demo.pmnd.rs)
+- 🐘 Database - [Postgres](https://www.postgresql.org)
+- 🌧️ ORM - [Drizzle](https://orm.drizzle.team)
+- 🔑 Auth - [Better Auth](https://www.better-auth.com)
+- 🌐 Multi-language - [next-intl](https://next-intl.dev)
 - ✅ Schema Validations - [Zod](https://zod.dev)
+- 🔗 API Layer - [tRPC](https://trpc.io)
 - 🧹 Formatter and Linter - [Biome](https://biomejs.dev)
 - 🪝 Git hooks - [Lefthook](https://lefthook.dev)
 - 📊 Traffic Analysis - [Umami](https://umami.is)
