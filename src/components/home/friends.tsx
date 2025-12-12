@@ -13,6 +13,7 @@ export function Friends() {
       <Link
         href='https://waytoagi.com'
         target='_blank'
+        data-umami-event='friends:waytoagi'
       >
         <WaytoAGI className='h-14' />
       </Link>
@@ -20,6 +21,7 @@ export function Friends() {
       <Link
         href='https://www.chuhaiqu.club/?linkId=lp_905736&sourceId=sun0225SUN&tenantId=velocity1-llc'
         target='_blank'
+        data-umami-event='friends:chuhaiqu'
       >
         <div className='flex items-center'>
           <Chuhaiqu className='h-6' />
@@ -30,6 +32,7 @@ export function Friends() {
       <Link
         href='https://podwise.ai?ref=sun0225SUN'
         target='_blank'
+        data-umami-event='friends:podwise'
       >
         <div className='flex items-center gap-1 text-purple-400'>
           <Podwise1 className='h-10' />
@@ -40,6 +43,7 @@ export function Friends() {
       <Link
         href='https://mentorbook.ai?ref=sun0225SUN'
         target='_blank'
+        data-umami-event='friends:mentorbook'
       >
         <div className='flex items-center gap-2'>
           <Mentorbook className='h-6' />
@@ -50,6 +54,7 @@ export function Friends() {
       <Link
         href='https://openbuild.xyz?ref=sun0225SUN'
         target='_blank'
+        data-umami-event='friends:openbuild'
         className='scale-80'
       >
         <Openbuild className='h-8' />
@@ -58,6 +63,7 @@ export function Friends() {
       <Link
         href='https://www.juchats.com?ref=sun0225SUN'
         target='_blank'
+        data-umami-event='friends:juchats'
       >
         <Juchats className='h-6' />
       </Link>

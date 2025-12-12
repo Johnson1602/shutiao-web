@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./readme/logo.png" alt="logo" width="100" />
-  <h1>Podify</h1>
+  <h1>整点薯条吧｜Fries Bar</h1>
 
   <p>Developer Community</p>
 
@@ -43,7 +43,7 @@
             <sub><b>Guoqi Sun</b></sub>
         </a>
         <br />
-        <sub><b>💻 & 🎨 & 📝</b></sub>
+        <sub><b>💻 🎨 📝</b></sub>
       </td>
 		</tr>
 	<tbody>

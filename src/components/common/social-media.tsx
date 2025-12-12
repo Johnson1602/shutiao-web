@@ -14,6 +14,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
     <div className={cn('flex items-center gap-5', className)}>
       <Link
         href={socialLinks.podcast}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:podcast'
       >
         <Podcast className='size-6 cursor-pointer' />
@@ -21,6 +22,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
 
       <Link
         href={socialLinks.x}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:x'
       >
         <XIcon className='size-6 cursor-pointer' />
@@ -28,6 +30,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
 
       <Link
         href={socialLinks.github}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:github'
       >
         <Github className='size-6 cursor-pointer' />
@@ -35,6 +38,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
 
       <Link
         href={socialLinks.telegram}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:telegram'
       >
         <TelegramIcon className='size-6 cursor-pointer' />
@@ -42,6 +46,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
 
       <Link
         href={socialLinks.youtube}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:youtube'
       >
         <Youtube className='size-6 cursor-pointer' />
@@ -49,6 +54,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
 
       <Link
         href={socialLinks.wechat}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:wechat'
       >
         <MessageCircleMore className='size-6 cursor-pointer' />
@@ -56,6 +62,7 @@ export function SocialMedia({ className }: SocialMediaProps) {
 
       <Link
         href={socialLinks.email}
+        className='transition-all duration-300 hover:scale-125'
         data-umami-event='social-media:email'
       >
         <Mail className='size-6 cursor-pointer' />
