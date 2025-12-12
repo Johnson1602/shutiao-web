@@ -12,6 +12,7 @@
   },
   "nav": {
     "home": "首页",
+    "products": "产品",
     "event": "活动",
     "blog": "博客",
     "about": "关于",
@@ -53,5 +54,19 @@
     "no-active-sessions": "未找到活跃会话",
     "mobile-app": "移动应用",
     "current-session": "当前会话"
+  },
+  "footer": {
+    "description": "整点薯条吧是一个开发者社区。",
+    "social": "社交媒体",
+    "friends": "友情链接",
+    "products": "产品",
+    "company": "公司",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "members": "团队成员",
+    "contact": "联系我们",
+    "terms-full": "服务条款",
+    "privacy-full": "隐私政策",
+    "copyright": "© 2025 整点薯条吧. 保留所有权利。"
   }
 }

@@ -12,9 +12,10 @@
   },
   "nav": {
     "home": "Home",
-    "event": "Event",
-    "blog": "Blog",
-    "about": "About",
+    "products": "Products",
+    "event": "Events",
+    "blog": "Blogs",
+    "about": "About us",
     "menu": "Menu"
   },
   "metadata": {
@@ -53,5 +54,19 @@
     "no-active-sessions": "No active sessions found",
     "mobile-app": "Mobile app",
     "current-session": "Current session"
+  },
+  "footer": {
+    "description": "Fries Bar is a community for developers.",
+    "social": "Social",
+    "friends": "Friends",
+    "products": "Products",
+    "company": "Company",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "members": "Members",
+    "contact": "Contact us",
+    "terms-full": "Terms and Conditions",
+    "privacy-full": "Privacy Policy",
+    "copyright": "© 2025 Fries Bar. All rights reserved."
   }
 }

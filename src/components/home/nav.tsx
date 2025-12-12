@@ -50,6 +50,23 @@ export function Nav() {
             )}
           >
             <Link
+              href='/product'
+              className='opacity-70 transition-all duration-150 hover:opacity-100'
+            >
+              {t('products')}
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={cn(
+              navigationMenuTriggerStyle(),
+              'bg-transparent! hover:bg-transparent!',
+            )}
+          >
+            <Link
               href='/event'
               className='opacity-70 transition-all duration-150 hover:opacity-100'
             >
@@ -116,6 +133,13 @@ export function NavMobile() {
               className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
             >
               {t('home')}
+            </Link>
+
+            <Link
+              href='/event'
+              className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
+            >
+              {t('products')}
             </Link>
 
             <Link

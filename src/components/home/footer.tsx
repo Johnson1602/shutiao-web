@@ -1,0 +1,114 @@
+import { useTranslations } from 'next-intl'
+import { Logo } from '@/components/common/logo'
+import { SocialMedia } from '@/components/common/social-media'
+import { LanguageToggle } from '@/components/language/toggle'
+import { socialLinks } from '@/config'
+
+export function Footer() {
+  const t = useTranslations('footer')
+  const menuItems = [
+    {
+      title: t('social'),
+      links: [
+        { text: 'X', url: socialLinks.x },
+        { text: 'GitHub', url: socialLinks.github },
+        { text: 'WeChat', url: socialLinks.wechat },
+        { text: 'Telegram', url: socialLinks.telegram },
+        { text: 'YouTube', url: socialLinks.youtube },
+      ],
+    },
+    {
+      title: t('friends'),
+      links: [
+        {
+          text: 'Dalifornia',
+          url: 'https://dalifornia.org',
+        },
+        {
+          text: 'WaytoAGI',
+          url: 'https://waytoagi.com',
+        },
+        {
+          text: 'OpenBuild',
+          url: 'https://openbuild.xyz',
+        },
+        {
+          text: '出海去社区',
+          url: 'https://www.chuhaiqu.club',
+        },
+      ],
+    },
+    {
+      title: t('products'),
+      links: [
+        { text: 'Camlife App', url: 'https://camlife.app' },
+        { text: 'Camlife Tools', url: 'https://camlife.tools' },
+        { text: 'MindMap Best', url: 'https://mindmap.best' },
+        { text: 'Cyc Earth', url: 'https://cyc.earth' },
+        { text: 'YoLo Earth', url: 'https://yolo.earth' },
+      ],
+    },
+    {
+      title: t('company'),
+      links: [
+        { text: t('terms'), url: '/terms' },
+        { text: t('privacy'), url: '/privacy' },
+        { text: t('members'), url: 'https://guoqi.dev' },
+        { text: t('contact'), url: socialLinks.email },
+      ],
+    },
+  ]
+
+  const bottomLinks = [
+    { text: t('terms-full'), url: '/terms' },
+    { text: t('privacy-full'), url: '/privacy' },
+  ]
+
+  return (
+    <footer className='mx-auto flex w-full max-w-7xl flex-col justify-center px-8 py-32'>
+      <div className='grid grid-cols-2 gap-8 lg:grid-cols-6'>
+        <div className='col-span-2 mb-8 flex flex-col gap-4 lg:mb-0'>
+          <div className='flex items-center gap-2 lg:justify-start'>
+            <Logo />
+          </div>
+
+          <p className='text-sm'>{t('description')}</p>
+
+          <SocialMedia className='mt-2' />
+        </div>
+
+        {menuItems.map((section, sectionIdx) => (
+          <div key={sectionIdx}>
+            <h3 className='mb-4 font-bold'>{section.title}</h3>
+            <ul className='space-y-4 text-muted-foreground'>
+              {section.links.map((link, linkIdx) => (
+                <li
+                  key={linkIdx}
+                  className='font-medium hover:text-primary'
+                  data-umami-event={`footer:${section.title}:${link.text}`}
+                >
+                  <a href={link.url}>{link.text}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className='mt-24 flex flex-col justify-between gap-4 border-t pt-8 font-medium text-muted-foreground text-sm md:flex-row md:items-center'>
+        <p>{t('copyright')}</p>
+        <ul className='flex items-center gap-5'>
+          {bottomLinks.map((link, linkIdx) => (
+            <li
+              key={linkIdx}
+              className='underline hover:text-primary'
+            >
+              <a href={link.url}>{link.text}</a>
+            </li>
+          ))}
+          <LanguageToggle variant='select' />
+        </ul>
+      </div>
+    </footer>
+  )
+}

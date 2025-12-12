@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Logo } from '@/components/common/logo'
 import { Nav, NavMobile } from '@/components/home/nav'
-import { LanguageToggle } from '@/components/language/toggle'
 import { ThemeToggle } from '@/components/theme/toggle'
 import { ShinyButton } from '@/components/ui/shiny-button'
 import { cn } from '@/lib/utils'
@@ -27,12 +26,14 @@ export function Header() {
       </div>
 
       <div className='flex flex-1 items-center justify-end gap-5'>
-        <div className='hidden gap-5 md:flex'>
-          <LanguageToggle />
-          <ThemeToggle />
+        <div className='hidden md:block'>
+          <ThemeToggle data-umami-event='header:theme-toggle' />
         </div>
 
-        <Link href={SIGN_IN_PAGE}>
+        <Link
+          href={SIGN_IN_PAGE}
+          data-umami-event='header:login'
+        >
           <ShinyButton>Login</ShinyButton>
         </Link>
 
