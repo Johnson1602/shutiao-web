@@ -3,6 +3,10 @@
     "en": "English",
     "zh": "简体中文"
   },
+  "hero": {
+    "title": "Fries Bar",
+    "subtitle": "Developer Community"
+  },
   "common": {
     "title": "Hello World"
   },

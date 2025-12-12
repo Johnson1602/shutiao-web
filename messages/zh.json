@@ -3,6 +3,10 @@
     "en": "English",
     "zh": "简体中文"
   },
+  "hero": {
+    "title": "整点薯条吧",
+    "subtitle": "开发者社区"
+  },
   "common": {
     "title": "你好，世界"
   },
