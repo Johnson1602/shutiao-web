@@ -13,8 +13,9 @@
   "nav": {
     "home": "首页",
     "products": "产品",
-    "event": "活动",
-    "blog": "博客",
+    "communities": "社区",
+    "events": "活动",
+    "blogs": "博客",
     "about": "关于",
     "menu": "菜单"
   },

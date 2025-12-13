@@ -13,9 +13,10 @@
   "nav": {
     "home": "Home",
     "products": "Products",
-    "event": "Events",
-    "blog": "Blogs",
-    "about": "About us",
+    "communities": "Communities",
+    "events": "Events",
+    "blogs": "Blogs",
+    "about": "About",
     "menu": "Menu"
   },
   "metadata": {

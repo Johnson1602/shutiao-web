@@ -34,6 +34,7 @@ export function Nav() {
           >
             <Link
               href='/'
+              data-umami-event='nav:home'
               className='opacity-70 transition-all duration-150 hover:opacity-100'
             >
               {t('home')}
@@ -50,7 +51,8 @@ export function Nav() {
             )}
           >
             <Link
-              href='/product'
+              href='/products'
+              data-umami-event='nav:products'
               className='opacity-70 transition-all duration-150 hover:opacity-100'
             >
               {t('products')}
@@ -67,10 +69,11 @@ export function Nav() {
             )}
           >
             <Link
-              href='/event'
+              href='/events'
+              data-umami-event='nav:event'
               className='opacity-70 transition-all duration-150 hover:opacity-100'
             >
-              {t('event')}
+              {t('events')}
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -84,10 +87,29 @@ export function Nav() {
             )}
           >
             <Link
-              href='/blog'
+              href='/communities'
+              data-umami-event='nav:communities'
               className='opacity-70 transition-all duration-150 hover:opacity-100'
             >
-              {t('blog')}
+              {t('communities')}
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={cn(
+              navigationMenuTriggerStyle(),
+              'bg-transparent! hover:bg-transparent!',
+            )}
+          >
+            <Link
+              href='/blogs'
+              data-umami-event='nav:blogs'
+              className='opacity-70 transition-all duration-150 hover:opacity-100'
+            >
+              {t('blogs')}
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -102,6 +124,7 @@ export function Nav() {
           >
             <Link
               href='/about'
+              data-umami-event='nav:about'
               className='opacity-70 transition-all duration-150 hover:opacity-100'
             >
               {t('about')}
@@ -130,6 +153,7 @@ export function NavMobile() {
           <nav className='flex flex-col divide-y divide-border'>
             <Link
               href='/'
+              data-umami-event='nav-mobile:home'
               className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
             >
               {t('home')}
@@ -137,6 +161,7 @@ export function NavMobile() {
 
             <Link
               href='/event'
+              data-umami-event='nav-mobile:products'
               className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
             >
               {t('products')}
@@ -144,6 +169,7 @@ export function NavMobile() {
 
             <Link
               href='/event'
+              data-umami-event='nav-mobile:event'
               className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
             >
               {t('event')}
@@ -151,6 +177,7 @@ export function NavMobile() {
 
             <Link
               href='/blog'
+              data-umami-event='nav-mobile:blogs'
               className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
             >
               {t('blog')}
@@ -158,6 +185,7 @@ export function NavMobile() {
 
             <Link
               href='/about'
+              data-umami-event='nav-mobile:about'
               className='flex items-center px-6 py-4 text-lg transition-colors hover:bg-muted/50'
             >
               {t('about')}
