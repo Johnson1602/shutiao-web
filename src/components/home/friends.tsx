@@ -6,6 +6,7 @@ import Openbuild from '@/assets/images/svg/openbuild.min.svg'
 import Podwise1 from '@/assets/images/svg/podwise-1.svg'
 import Podwise2 from '@/assets/images/svg/podwise-2.svg'
 import WaytoAGI from '@/assets/images/svg/waytoagi.min.svg'
+import Youmind from '@/assets/images/svg/youmind.svg'
 
 export function Friends() {
   return (
@@ -16,6 +17,14 @@ export function Friends() {
         data-umami-event='friends:waytoagi'
       >
         <WaytoAGI className='h-14' />
+      </Link>
+
+      <Link
+        href='https://youmind.ai'
+        target='_blank'
+        data-umami-event='friends:youmind'
+      >
+        <Youmind className='' />
       </Link>
 
       <Link
@@ -47,7 +56,7 @@ export function Friends() {
       >
         <div className='flex items-center gap-2'>
           <Mentorbook className='h-6' />
-          <span className='font-medium text-xl'>Mentorbook</span>
+          <span className='font-medium text-xl'>MentorBook</span>
         </div>
       </Link>
 
