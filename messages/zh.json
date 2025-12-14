@@ -69,6 +69,12 @@
       "description": "发现清迈旅居生活"
     }
   },
+  "blogs": {
+    "title": "博客",
+    "subtitle": "这里有一些博客可以帮助你了解更多。",
+    "not-found": "文章未找到",
+    "back": "返回博客列表"
+  },
   "footer": {
     "description": "整点薯条吧是一个开发者社区。",
     "social": "社交媒体",

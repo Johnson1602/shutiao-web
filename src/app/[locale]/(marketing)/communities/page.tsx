@@ -1,15 +1,8 @@
 import { ExternalLink, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { buttonVariants } from '@/components/ui/button'
-import {
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { MagicCard } from '@/components/ui/magic-card'
-import { cn } from '@/lib/utils'
 
 export default function CommunitiesPage() {
   const t = useTranslations('communities')
@@ -45,7 +38,7 @@ export default function CommunitiesPage() {
         {communities.map((community) => (
           <MagicCard
             key={community.name}
-            className='w-full max-w-[380px] cursor-pointer rounded-xl border-none py-6 shadow-2xl transition-all duration-300 hover:scale-105'
+            className='w-full max-w-[380px] cursor-pointer rounded-xl border border-border py-6 transition-all duration-300 hover:scale-105 hover:shadow-md'
             backgroundClassName='bg-white dark:bg-black/20 backdrop-blur-xl'
             gradientClassName='md:hidden dark:md:block'
             gradientFrom='#38bdf8'
@@ -59,24 +52,17 @@ export default function CommunitiesPage() {
               data-umami-event={`communities:${community.name}`}
             >
               <CardHeader>
-                <CardTitle className='flex items-center gap-3 text-2xl'>
-                  <MapPin className='h-6 w-6' />
-                  {locale === 'en' ? community.englishName : community.name}
+                <CardTitle className='flex items-center justify-between gap-3 text-2xl'>
+                  <div className='flex items-center gap-2'>
+                    <MapPin className='size-6' />
+                    {locale === 'en' ? community.englishName : community.name}
+                  </div>
+                  <ExternalLink className='size-5' />
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className='text-muted-foreground'>{community.description}</p>
               </CardContent>
-              <CardFooter className='mt-auto'>
-                <div
-                  className={cn(
-                    buttonVariants({ variant: 'outline' }),
-                    'w-full',
-                  )}
-                >
-                  {t('visit')} <ExternalLink className='ml-2 h-4 w-4' />
-                </div>
-              </CardFooter>
             </Link>
           </MagicCard>
         ))}

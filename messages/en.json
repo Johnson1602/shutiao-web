@@ -69,6 +69,12 @@
       "description": "Discover Chiang Mai Living"
     }
   },
+  "blogs": {
+    "title": "Blogs",
+    "subtitle": "Here are some blogs to help you learn more.",
+    "not-found": "Post not found",
+    "back": "Back to Blogs"
+  },
   "footer": {
     "description": "Fries Bar is a community for developers.",
     "social": "Social",

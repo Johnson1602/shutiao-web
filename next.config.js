@@ -3,6 +3,7 @@
  * for Docker builds.
  */
 import './src/env.js'
+import { withContentlayer } from 'next-contentlayer2'
 import createNextIntlPlugin from 'next-intl/plugin'
 
 const withNextIntl = createNextIntlPlugin()
@@ -33,4 +34,4 @@ const config = {
   },
 }
 
-export default withNextIntl(config)
+export default withNextIntl(withContentlayer(config))
